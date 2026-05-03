@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-02-17 15:33:59",
+  "baseline": {
+    "model_path": "/workspace/models/base_model",
+    "benchmark_scores": {
+      "gsm8k": 0.1,
+      "mmlu": 0.2982456140350877,
+      "translation_ko2en": 0.5619702577964035,
+      "translation_en2ko": 0.3146169599895212,
+      "summarization": 0.4569611259137802
+    },
+    "avg_accuracy": 0.34635879154695853,
+    "time_per_token_ms": 1.033883140479361,
+    "tokens_per_sec": 967.2273014688574,
+    "total_tokens": 1502,
+    "total_time_sec": 1.5528924770000003,
+    "num_parameters": 0,
+    "model_size_mb": 2440.28214263916
+  },
+  "models": [
+    {
+      "model_path": "/workspace/models/quantized/actorder_dynamic",
+      "avg_accuracy": 0.35624079842149475,
+      "perf_norm": 1.0285311275928632,
+      "time_per_token_ms": 0.5236060473996949,
+      "speed_norm": 0.4935539357408184,
+      "score": 0.7610425316668408,
+      "benchmark_details": {
+        "gsm8k": 0.2,
+        "mmlu": 0.2596491228070175,
+        "translation_ko2en": 0.5646113098984198,
+        "translation_en2ko": 0.26150322399218917,
+        "summarization": 0.4954403354098476
+      }
+    },
+    {
+      "model_path": "/workspace/models/quantized/calibraion_512",
+      "avg_accuracy": 0.31801427199078863,
+      "perf_norm": 0.9181642844127806,
+      "time_per_token_ms": 0.5101239198398688,
+      "speed_norm": 0.5065942175985678,
+      "score": 0.7123792510056742,
+      "benchmark_details": {
+        "gsm8k": 0.1,
+        "mmlu": 0.26842105263157895,
+        "translation_ko2en": 0.564186020988989,
+        "translation_en2ko": 0.19028201061451416,
+        "summarization": 0.467182275718861
+      }
+    },
+    {
+      "model_path": "/workspace/models/quantized/actorder_static1",
+      "avg_accuracy": 0.31801427199078863,
+      "perf_norm": 0.9181642844127806,
+      "time_per_token_ms": 0.5286616613226676,
+      "speed_norm": 0.48866400792883313,
+      "score": 0.7034141461708069,
+      "benchmark_details": {
+        "gsm8k": 0.1,
+        "mmlu": 0.26842105263157895,
+        "translation_ko2en": 0.564186020988989,
+        "translation_en2ko": 0.19028201061451416,
+        "summarization": 0.467182275718861
+      }
+    },
+    {
+      "model_path": "/workspace/models/quantized/actorder_static2",
+      "avg_accuracy": 0.3087535861884084,
+      "perf_norm": 0.8914270222777017,
+      "time_per_token_ms": 0.5079563878908223,
+      "speed_norm": 0.5086907136764917,
+      "score": 0.7000588679770967,
+      "benchmark_details": {
+        "gsm8k": 0.1,
+        "mmlu": 0.28421052631578947,
+        "translation_ko2en": 0.4885644214718733,
+        "translation_en2ko": 0.24380264360392484,
+        "summarization": 0.42719033955045427
+      }
+    },
+    {
+      "model_path": "/workspace/models/quantized/blocksize_64",
+      "avg_accuracy": 0.3065584506477451,
+      "perf_norm": 0.8850892719614499,
+      "time_per_token_ms": 0.509643922615057,
+      "speed_norm": 0.5070584840190352,
+      "score": 0.6960738779902426,
+      "benchmark_details": {
+        "gsm8k": 0.0,
+        "mmlu": 0.2894736842105263,
+        "translation_ko2en": 0.5254316648317338,
+        "translation_en2ko": 0.2488323390403354,
+        "summarization": 0.46905456515613003
+      }
+    },
+    {
+      "model_path": "/workspace/models/quantized/kaggle/working/model",
+      "avg_accuracy": 0.2947490243159781,
+      "perf_norm": 0.8509933384382325,
+      "time_per_token_ms": 0.5064325178098725,
+      "speed_norm": 0.5101646424226778,
+      "score": 0.6805789904304551,
+      "benchmark_details": {
+        "gsm8k": 0.0,
+        "mmlu": 0.28771929824561404,
+        "translation_ko2en": 0.5202994306994118,
+        "translation_en2ko": 0.22491751475998975,
+        "summarization": 0.44080887787487494
+      }
+    },
+    {
+      "model_path": "/workspace/models/quantized/actorder_weight",
+      "avg_accuracy": 0.2805987540583338,
+      "perf_norm": 0.8101389683370889,
+      "time_per_token_ms": 0.5055074742744912,
+      "speed_norm": 0.511059369785146,
+      "score": 0.6605991690611175,
+      "benchmark_details": {
+        "gsm8k": 0.0,
+        "mmlu": 0.2824561403508772,
+        "translation_ko2en": 0.5141670993726681,
+        "translation_en2ko": 0.19241357876332768,
+        "summarization": 0.4139569518047961
+      }
+    }
+  ],
+  "ranking": [
+    {
+      "rank": 1,
+      "model": "actorder_dynamic",
+      "score": 0.7610425316668408
+    },
+    {
+      "rank": 2,
+      "model": "calibraion_512",
+      "score": 0.7123792510056742
+    },
+    {
+      "rank": 3,
+      "model": "actorder_static1",
+      "score": 0.7034141461708069
+    },
+    {
+      "rank": 4,
+      "model": "actorder_static2",
+      "score": 0.7000588679770967
+    },
+    {
+      "rank": 5,
+      "model": "blocksize_64",
+      "score": 0.6960738779902426
+    },
+    {
+      "rank": 6,
+      "model": "model",
+      "score": 0.6805789904304551
+    },
+    {
+      "rank": 7,
+      "model": "actorder_weight",
+      "score": 0.6605991690611175
+    }
+  ]
+}

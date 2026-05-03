@@ -1,0 +1,34 @@
+services:
+  lg-aimers-eval:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lg-aimers-eval
+    # 환경 변수
+    environment:
+      - HF_HUB_ENABLE_HF_TRANSFER=0
+      - HF_HOME=/workspace/.cache/huggingface
+    # GPU 패스스루
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+    # 볼륨 마운트
+    volumes:
+      # 기본 모델 (EXAONE-4.0-1.2B)
+      - C:/Users/htw02/project_github/lg_aimers/base_model:/workspace/models/base_model:ro
+      # 양자화 모델 디렉토리 (이 폴더 안에 모델 폴더들을 배치)
+      - ../models/quantized:/workspace/models/quantized
+      # 평가 스크립트
+      - ../evaluate_local.py:/workspace/evaluate_local.py
+      # 결과 저장 디렉토리
+      - ./results:/workspace/results
+    # 인터랙티브 모드
+    stdin_open: true
+    tty: true
+    # 공유 메모리 확대 (PyTorch DataLoader용)
+    shm_size: '8g'
+    working_dir: /workspace

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-02-19 23:44:31",
+  "baseline": {
+    "model_path": "/workspace/lg_aimers/base_model",
+    "benchmark_scores": {
+      "gsm8k": 0.0,
+      "mmlu": 0.2631578947368421,
+      "translation_ko2en": 0.3593041119630842,
+      "translation_en2ko": 0.3768499164492418,
+      "summarization": 0.7804878048780488
+    },
+    "avg_accuracy": 0.35595994560544336,
+    "time_per_token_ms": 1.035621768666715,
+    "tokens_per_sec": 965.6034956540403,
+    "total_tokens": 1500,
+    "total_time_sec": 1.5534326530000726,
+    "num_parameters": 0,
+    "model_size_mb": 2440.28214263916
+  },
+  "models": [],
+  "ranking": []
+}

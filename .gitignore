@@ -1,0 +1,51 @@
+# =====================================================
+# LG Aimers - Model Compression Project
+# =====================================================
+# EXAONE-4.0-1.2B 모델의 GPTQ/AutoRound 양자화를 통한
+# 모델 경량화 및 추론 최적화 프로젝트
+
+# ── 대용량 모델/바이너리 ──
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.zip
+*.tar.gz
+mlflow.db
+
+# ── 모델 디렉터리 (절대 업로드 금지) ──
+base_model/
+model_DB/
+now_workspace/models/quantized/
+now_workspace/models/colab/
+now_workspace/models/kaggle/
+now_workspace/models/optimized_submit/
+01_week/model/
+01_week/baseline_submit/
+
+# ── 별도 git repo (서브모듈 아님, 제외) ──
+lgaimers-lab/
+lg-aimers8/
+
+# ── 외부 라이브러리 소스 ──
+compressed-tensors/
+llm-compressor/
+vllm/
+
+# ── Python 캐시 ──
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ── 환경 ──
+.venv/
+.env
+*.egg-info/
+
+# ── OS/IDE ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
